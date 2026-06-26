@@ -1,0 +1,486 @@
+/* =========================
+RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+BODY
+========================= */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background:
+    radial-gradient(circle at top, #1b0040 0%, #050014 55%);
+  color: white;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* =========================
+BOTONES
+========================= */
+
+.btn-neon,
+.btn-outline {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.btn-neon {
+  background: #ff2fa6;
+  color: white;
+  border: none;
+  box-shadow: 0 0 18px #ff2fa6;
+}
+
+.btn-neon:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px #ff2fa6;
+}
+
+.btn-outline {
+  border: 2px solid #00f7ff;
+  color: #00f7ff;
+}
+
+.btn-outline:hover {
+  background: #00f7ff;
+  color: black;
+}
+
+/* =========================
+INTRO
+========================= */
+
+.intro {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.intro__box {
+  text-align: center;
+  background: rgba(255,255,255,0.05);
+  border: 2px solid #ff2fa6;
+  border-radius: 30px;
+  padding: 50px 35px;
+  box-shadow: 0 0 35px rgba(255, 47, 166, 0.5);
+  max-width: 600px;
+}
+
+.intro__tag {
+  color: #00f7ff;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.intro h1 {
+  font-size: 4.5rem;
+  color: #ff2fa6;
+  text-shadow: 0 0 18px #ff2fa6;
+  margin-bottom: 20px;
+}
+
+.intro__text {
+  margin-bottom: 30px;
+  color: #ffffff;
+  font-size: 1.1rem;
+}
+
+/* =========================
+CONTENIDO
+========================= */
+
+.contenido {
+  display: none;
+  padding-bottom: 140px;
+}
+
+.contenido.activo {
+  display: block;
+}
+
+/* =========================
+HOME HERO
+========================= */
+
+.home-hero {
+  width: 90%;
+  max-width: 1300px;
+  margin: 70px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.home-hero__text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tagline {
+  color: #00f7ff;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.home-hero__text h1 {
+  font-size: 4rem;
+  line-height: 1.1;
+}
+
+.home-hero__text p {
+  font-size: 1.1rem;
+  color: #d6d6d6;
+}
+
+.home-hero__buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.home-hero__image {
+  display: flex;
+  justify-content: center;
+}
+
+.home-hero__image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 25px;
+  border: 3px solid #00f7ff;
+  box-shadow: 0 0 30px #00f7ff;
+}
+
+/* =========================
+SECCIONES
+========================= */
+
+.info,
+.location-secret,
+.countdown,
+.rsvp,
+.looks-link,
+.looks-section,
+.looks-hero {
+  width: 90%;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 40px;
+  border-radius: 25px;
+  background: rgba(255,255,255,0.05);
+  border: 2px solid #ff2fa6;
+  box-shadow: 0 0 25px rgba(255, 47, 166, 0.3);
+}
+
+h2 {
+  color: #00f7ff;
+  margin-bottom: 15px;
+  text-shadow: 0 0 10px #00f7ff;
+}
+
+/* =========================
+INFO CARDS
+========================= */
+
+.info__cards {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.info__cards article {
+  background: #12002f;
+  padding: 25px;
+  border-radius: 20px;
+  border: 2px solid #00f7ff;
+  text-align: center;
+}
+
+.info__cards h3 {
+  margin-bottom: 10px;
+  color: #ffe600;
+}
+
+/* =========================
+COUNTDOWN
+========================= */
+
+.countdown__box {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.countdown__box div {
+  background: #12002f;
+  padding: 25px;
+  border-radius: 20px;
+  border: 2px solid #00f7ff;
+  text-align: center;
+}
+
+.countdown__box span {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ff2fa6;
+}
+
+/* =========================
+FORMULARIO
+========================= */
+
+.rsvp__form {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.rsvp__form label {
+  font-weight: bold;
+  color: #ffe600;
+}
+
+.rsvp__form input,
+.rsvp__form select {
+  padding: 14px;
+  border-radius: 12px;
+  border: 2px solid #00f7ff;
+  background: #050014;
+  color: white;
+  outline: none;
+}
+
+.rsvp__form input:focus,
+.rsvp__form select:focus {
+  border-color: #ff2fa6;
+  box-shadow: 0 0 12px #ff2fa6;
+}
+
+/* =========================
+LOOKS HERO
+========================= */
+
+.looks-hero {
+  text-align: center;
+}
+
+.looks-hero h1 {
+  font-size: 4rem;
+  margin: 15px 0;
+}
+
+.looks-hero__text {
+  color: #d6d6d6;
+  margin-bottom: 25px;
+}
+
+/* =========================
+LOOKS GRID
+========================= */
+
+.looks-grid {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.look-card {
+  background: #12002f;
+  border-radius: 25px;
+  overflow: hidden;
+  border: 2px solid #00f7ff;
+  transition: 0.3s;
+  box-shadow: 0 0 18px rgba(0, 247, 255, 0.3);
+}
+
+.look-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 0 30px #ff2fa6;
+}
+
+.look-card img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  display: block;
+}
+
+/* =========================
+REPRODUCTOR MUSICAL
+========================= */
+
+.music-player {
+  position: fixed;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  width: 92%;
+  max-width: 900px;
+  background: rgba(5, 0, 20, 0.96);
+  border: 2px solid #00f7ff;
+  border-radius: 24px;
+  padding: 16px 20px;
+  box-shadow: 0 0 25px rgba(0, 247, 255, 0.6);
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  z-index: 9999;
+}
+
+.music-player.activo {
+  display: flex;
+}
+
+.music-player__info {
+  min-width: 230px;
+}
+
+.music-player__label {
+  display: block;
+  color: #ff2fa6;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.music-player h3 {
+  color: #fff;
+  font-size: 1rem;
+  margin-top: 4px;
+}
+
+.music-player__controls {
+  display: flex;
+  gap: 10px;
+}
+
+.music-player__controls button,
+.music-player__playlist button {
+  border: none;
+  border-radius: 50px;
+  padding: 10px 14px;
+  background: #ff2fa6;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 14px #ff2fa6;
+}
+
+.music-player__playlist {
+  position: relative;
+}
+
+.playlist {
+  position: absolute;
+  right: 0;
+  bottom: 55px;
+  width: 300px;
+  max-height: 300px;
+  overflow-y: auto;
+  background: #12002f;
+  border: 2px solid #00f7ff;
+  border-radius: 18px;
+  padding: 10px;
+  list-style: none;
+  box-shadow: 0 0 25px rgba(0, 247, 255, 0.6);
+}
+
+.playlist li {
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.playlist li:hover,
+.playlist li.activo {
+  background: #ff2fa6;
+  color: white;
+}
+
+.oculto {
+  display: none;
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+
+  .home-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .looks-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .info__cards,
+  .countdown__box {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+
+  .intro h1,
+  .looks-hero h1,
+  .home-hero__text h1 {
+    font-size: 2.8rem;
+  }
+
+  .looks-grid,
+  .info__cards,
+  .countdown__box {
+    grid-template-columns: 1fr;
+  }
+
+  .music-player {
+    flex-direction: column;
+    text-align: center;
+    bottom: 10px;
+  }
+
+  .playlist {
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  .info,
+  .location-secret,
+  .countdown,
+  .rsvp,
+  .looks-link,
+  .looks-section,
+  .looks-hero {
+    padding: 25px;
+  }
+
+  .look-card img {
+    height: auto;
+  }
+}

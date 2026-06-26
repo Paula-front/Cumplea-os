@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cumpleaños Paula 40</title>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- MÚSICA -->
+  <audio id="musicaFiesta" loop>
+    <source src="assets/music/HaddawayWhatisLove.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- INTRO -->
+  <section class="intro" id="intro">
+    <div class="intro__box">
+      <p class="intro__tag">I LOVE 80s / I LOVE 90s</p>
+      <h1>PAULA 40</h1>
+      <p class="intro__text">Música • amigos • baile • recuerdos</p>
+
+      <button id="btnStart" class="btn-neon">
+        ▶ START PARTY
+      </button>
+    </div>
+  </section>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="contenido" id="contenido">
+
+    <!-- HERO -->
+    <section class="home-hero">
+      <div class="home-hero__text">
+        <p class="tagline">BACK TO THE 80s & 90s</p>
+        <h1>Estás invitado/a a mi cumple</h1>
+        <p>
+          Prepárate para una noche llena de música, nostalgia,
+          baile y mucha diversión.
+        </p>
+
+        <div class="home-hero__buttons">
+          <a href="#rsvp" class="btn-neon">Confirmar asistencia</a>
+          <a href="looks.html" class="btn-outline">Ver looks</a>
+        </div>
+      </div>
+
+      <div class="home-hero__image">
+        <img src="assets/img/invitacion.png" alt="Invitación cumpleaños Paula">
+      </div>
+    </section>
+
+    <!-- DATOS -->
+    <section class="info">
+      <h2>🎉 Paula 40 años</h2>
+
+      <div class="info__cards">
+        <article>
+          <h3>📅 Fecha</h3>
+          <p>19/06</p>
+        </article>
+
+        <article>
+          <h3>⏰ Hora</h3>
+          <p>20:00 hrs</p>
+        </article>
+
+        <article>
+          <h3>👗 Dress Code</h3>
+          <p>80s y 90s</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- UBICACIÓN SECRETA -->
+    <section class="location-secret">
+      <h2>📼 SECRET PARTY LOCATION</h2>
+      <p>
+        La ubicación exacta será enviada solo a invitados confirmados.
+      </p>
+    </section>
+
+    <!-- CUENTA REGRESIVA -->
+    <section class="countdown">
+      <h2>⏳ Cuenta regresiva</h2>
+
+      <div class="countdown__box">
+        <div>
+          <span id="dias">00</span>
+          <p>Días</p>
+        </div>
+
+        <div>
+          <span id="horas">00</span>
+          <p>Horas</p>
+        </div>
+
+        <div>
+          <span id="minutos">00</span>
+          <p>Minutos</p>
+        </div>
+
+        <div>
+          <span id="segundos">00</span>
+          <p>Segundos</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- RSVP -->
+    <section class="rsvp" id="rsvp">
+      <h2>📟 RSVP RETRO CHECK-IN</h2>
+      <p>
+        Confirma tu asistencia para recibir la ubicación secreta de la fiesta.
+      </p>
+
+      <form 
+        action="https://formsubmit.co/paula.perez.v@gmail.com" 
+        method="POST" 
+        class="rsvp__form"
+      >
+        <input type="hidden" name="_subject" value="RSVP Cumpleaños Paula 40">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://pau-val.github.io/retro-party-paula/">
+
+        <label for="nombre">Nombre</label>
+        <input 
+          type="text" 
+          id="nombre" 
+          name="Nombre" 
+          placeholder="Escribe tu nombre"
+          required
+        >
+
+        <label for="personas">Cantidad de personas</label>
+        <input 
+          type="number" 
+          id="personas" 
+          name="Cantidad de personas" 
+          min="1" 
+          placeholder="Ej: 2"
+          required
+        >
+
+        <label for="respuesta">Respuesta</label>
+        <select id="respuesta" name="Respuesta" required>
+          <option value="">Selecciona una opción</option>
+          <option value="Sí asistiré">Sí asistiré 💃</option>
+          <option value="No podré asistir">No podré asistir 😢</option>
+        </select>
+
+        <button type="submit" class="btn-neon">
+          ENVIAR RSVP
+        </button>
+      </form>
+    </section>
+
+    <!-- LOOKS -->
+    <section class="looks-link">
+      <h2>¿No sabes qué ponerte?</h2>
+      <p>
+        Mira ideas de vestuario para venir con todo el estilo retro.
+      </p>
+
+      <a href="looks.html" class="btn-neon">
+        VER LOOKS 80s / 90s
+      </a>
+    </section>
+
+  </main>
+<!-- REPRODUCTOR MUSICAL -->
+<section class="music-player" id="musicPlayer">
+  <div class="music-player__info">
+    <span class="music-player__label">🎵 NOW PLAYING</span>
+    <h3 id="nombreCancion">Retro Party Mix</h3>
+  </div>
+
+  <div class="music-player__controls">
+    <button id="btnPrev">⏮</button>
+    <button id="btnPlayPause">⏸</button>
+    <button id="btnNext">⏭</button>
+  </div>
+
+  <div class="music-player__playlist">
+    <button id="btnPlaylist">🎧 Playlist</button>
+    <ul id="listaCanciones" class="playlist oculto"></ul>
+  </div>
+</section>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
